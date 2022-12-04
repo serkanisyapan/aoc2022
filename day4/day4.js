@@ -15,5 +15,3 @@ for (let pairs of data) {
     totalContainer += 1;
   }
 }
-
-console.log(totalContainer);
