@@ -6,13 +6,13 @@ for (let pairs of data) {
   let firstPairSplit = firstPair.split("-");
   let secondPairSplit = secondPair.split("-");
   for (let i = 0; i < firstPairSplit.length; i += 2) {
-    let s1 = parseInt(firstPairSplit[i]);
-    let e1 = parseInt(firstPairSplit[i + 1]);
-    let s2 = parseInt(secondPairSplit[i]);
-    let e2 = parseInt(secondPairSplit[i + 1]);
-    if (s1 <= s2 && e2 <= e1) {
+    let l1 = parseInt(firstPairSplit[i]);
+    let r1 = parseInt(firstPairSplit[i + 1]);
+    let l2 = parseInt(secondPairSplit[i]);
+    let r2 = parseInt(secondPairSplit[i + 1]);
+    if (l1 <= l2 && r2 <= r1) {
       totalContainer += 1;
-    } else if (s2 <= s1 && e1 <= e2) {
+    } else if (l2 <= l1 && r1 <= r2) {
       totalContainer += 1;
     }
   }
