@@ -17,9 +17,18 @@ for (let crates of data) {
   const quantity = parseInt(splitCrates[1]);
   const from = parseInt(splitCrates[3]) - 1;
   const to = parseInt(splitCrates[5]) - 1;
+  let newArray = [];
   for (let i = 0; i < quantity; i++) {
-    startPosition[to].push(startPosition[from].pop());
+    newArray.push(startPosition[from].pop());
   }
+  let reverseArray = newArray.reverse();
+  startPosition[to] = [...startPosition[to], ...reverseArray];
+  console.log(newArray.reverse());
+  console.log(startPosition);
 }
 
-// VWLCWGSDQ
+for (let lastIndex of startPosition) {
+  console.log(lastIndex[lastIndex.length - 1]);
+}
+
+// TCGLQSLPW
